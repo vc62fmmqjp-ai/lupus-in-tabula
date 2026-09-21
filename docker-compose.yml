@@ -1,0 +1,9 @@
+services:
+  lupus:
+    build: .
+    container_name: lupus-in-tabula
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3001}:3001"
+    environment:
+      - PORT=3001
